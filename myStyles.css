@@ -1,0 +1,44 @@
+
+body { 
+       background-color: #BBBBFF;
+}
+
+a { 
+   color: white;
+}
+a:hover { 
+   color: red;
+}
+
+p { 
+    color: blue;
+}
+
+/* "#" Works with ids. Ids take precedence over classes */
+#boldIt { 
+   font-weight: bold;
+   color: black;
+}
+
+/* "." Works with classes. */
+.redPs { 
+   color: red;
+   font-weight: italic;
+}
+
+ul li {  
+   color: #BBFFBB;
+}
+
+
+.circle { 
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background: white;
+  border-radius: 80%;
+  backface-visibility: hidden;
+}
