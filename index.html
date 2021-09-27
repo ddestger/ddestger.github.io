@@ -1,8 +1,40 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
-<title>Davison's CS 6011 Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+  <title>Davison's CS 6011 Page</title>
+  <link rel="stylesheet" type="text/css" href="myStyles.css" >
+
+  <style type="text/css">
+            #box-shadow-div{
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 5%;
+                box-shadow: 0 0 10px 10px black;
+            }
+  </style>
+
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.js"></script>
+  <script type="text/javascript">
+var down = false;
+
+$(document).mouseup(function() {
+    down = !down;
+});
+
+$(document).on('mousemove', function(e){
+  if( down ) {
+    $('#box-shadow-div').css({
+       left:  e.pageX,
+       top:   e.pageY
+    });
+  }
+});
+  </script>
+
 </head>
 
 <body>
@@ -11,9 +43,31 @@
 Welcome to Davison's CS 6011 Page.
 <hr>
 
-Here is some more content.
+<p id="boldIt"> Here is some more content using the boldIt id. ASASDFASDF</p>
 
-And some more...
+<p class="redPs"> And some more using the redPs class...</p>
+
+<p> This is a paragraph without a class or id. </p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<div id="box-shadow-div">
+  This is some text in the div...
+  <ol>
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+  </ol>
+</div>
+
+<a href="https://google.com">A link to google...</a>
+
+<!-- <img src="images/battle.jpg" \>
+-->
 
 </body>
 </html>
